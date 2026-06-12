@@ -1,0 +1,118 @@
+baseURL: "https://explorerOfUniverse.github.io/"
+title: "My blog"
+theme: "PaperMod"
+
+# 是否使用 emoji 简码
+enableInlineShortcodes: true
+enableRobotsTXT: true
+# 构建选项
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# 文章所在 section
+mainSections: ["posts"]
+
+# 国际化（先简单英文，后面想加中文再加 languages.zh-cn 块）
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+# 中文在前端显示 PaperMod 已经支持，这里准备扩展
+hasCJKLanguage: false  # 写中文时改成 true，PaperMod 会自动按字数换行
+
+pagination:
+  pagerSize: 10
+
+# ========= 主题参数（PaperMod） =========
+params:
+  env: production  # 本地预览时改 "development" 可以看未压缩资源
+  description: "My personal blog"
+  author: "explorerOfUniverse"
+  # 顶部 Profile 模式：填上后首页会变成头像+简介+按钮
+  profileMode:
+    enabled: true
+    title: "My blog"
+    subtitle: "Writing about things I learn"
+    imageUrl: "/images/avatar.png"
+    imageTitle: "avatar"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Posts
+        url: "posts/"
+      - name: About
+        url: "about/"
+      - name: GitHub
+        url: "https://github.com/explorerOfUniverse"
+
+  # 顶部导航栏按钮
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: |
+      Welcome to my blog. I write about things I learn.
+
+  # 社交链接（按需启用）
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/explorerOfUniverse"
+    - name: email
+      title: Email
+      url: "mailto:you@example.com"
+
+  # 底部 misc
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+
+  # 默认主菜单（首页 Profile 模式下不会显示）
+  mainSections:
+    - "posts"
+
+# 菜单（按需修改）
+menu:
+  main:
+    - name: Home
+      url: "/"
+      weight: 1
+    - name: Posts
+      url: "/posts/"
+      weight: 2
+    - name: Archive
+      url: "/archives/"
+      weight: 3
+    - name: About
+      url: "/about/"
+      weight: 4
+    - name: Tags
+      url: "/tags/"
+      weight: 5
+
+# Markdown 输出配置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 2
+
+# 输出格式
+outputs:
+  home: ["HTML", "RSS"]
+  section: ["HTML", "RSS"]
+  taxonomy: ["HTML", "RSS"]
+  term: ["HTML"]
