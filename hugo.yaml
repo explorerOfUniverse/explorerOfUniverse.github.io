@@ -1,6 +1,6 @@
 baseURL: "https://explorerOfUniverse.github.io/"
 title: "My blog"
-theme: "PaperMod"
+theme: "ananke"
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -94,3 +94,6 @@ outputs:
   section: ["HTML", "RSS"]
   taxonomy: ["HTML", "RSS"]
   term: ["HTML"]
+module:
+  imports:
+    - path: github.com/theNewDynamic/gohugo-theme-ananke
